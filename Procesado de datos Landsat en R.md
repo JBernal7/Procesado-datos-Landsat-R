@@ -56,7 +56,7 @@ library(getSpatialData)
 
 ##### Las imágenes Landsat 8 están formadas por once bandas distribuidas de la siguiente forma:
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c58.png)
+![image](https://user-images.githubusercontent.com/100314590/158028444-3d38298e-4bbe-4b23-8640-b00d2ab50084.png)
 
 
 ##### Las 9 primeras son adquiridas por el sensor óptico OLI (*Operational Land Imager*) con 30 metros de tamaño de píxel y las dos últimas son adquiridas por el sensor TIRS (Thermal INfrared) con un tamaño de píxel de 100 metros, aunque se remuestrean a 30 metros para distribuirlas con el mismo tamaño de píxel que las demás bandas: https://zonegis.es/combinar-bandas-landsat-8-con-qgis-2-16-nodebo/ 
@@ -88,8 +88,7 @@ imagenes <- getLandsat_records(time_range = c("2021-03-01", "2021-04-01"),
 ```plot_previews(imagenes[2,])```
 
 ##### Tras comparar las previsualizaciones, comprobamos que la imagen más clara para nuestro análisis corresponde con la captada a fecha de 2021-03-17:
-
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c59.png)
+![image](https://user-images.githubusercontent.com/100314590/158028487-9b6d5270-723e-45ed-8385-613a56392e18.png)
 
 
 
@@ -124,17 +123,17 @@ imagenes <- getLandsat_records(time_range = c("2021-09-15", "2021-10-30"),
 ##### Visualizamos la vista previa de la primera imagen:
 ```plot_previews(imagenes[1,])```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c5a.png)
+![image](https://user-images.githubusercontent.com/100314590/158028512-ee95a8c1-787a-4c3b-9f13-93fdd9d0067d.png)
 
 ##### Visualizamos la vista previa de la segunda imagen:
 ```plot_previews(imagenes[2,])```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c5b.png)
+![image](https://user-images.githubusercontent.com/100314590/158028521-87f709ed-4375-4848-9e23-7fea8378557e.png)
 
 ##### Visualizamos la vista previa de la tercera imagen:
 ```plot_previews(imagenes[3,])```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c5c.png)
+![image](https://user-images.githubusercontent.com/100314590/158028531-11e7658a-6520-4fd8-9e58-b2e5082ab5aa.png)
 
 
 ##### La imagen más clara para nuestro área de estudio es, en este caso, la imagen 1, correspondiente a la fecha 2021-09-25. Procedemos a su descarga: 
@@ -231,7 +230,7 @@ hist(b5,main = "Banda 5",breaks=200,xlab = "Valor del pixel")
 hist(b6,main = "Banda 6",breaks=200,xlab = "Valor del pixel")
 hist(b7,main = "Banda 7",breaks=200,xlab = "Valor del pixel")
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c5e.png)
+![image](https://user-images.githubusercontent.com/100314590/158028550-77b6664c-25dc-4a07-bd71-52d818288b08.png)
 
 
 ##### De esta forma, los valores de fluctuancia habrían de oscilar entre 0 y 1, si bien vemos que salen valores por debajo de 0. Obtener valores por debajo o por encima puede suceder en función de situaciones físicas concretas, como la presencia de zonas nevadas que saturan el sensor. Estas situaciones se pueden identificar y solucionar limitando los valores digitales de los píxeles. Antes, podemos visualizar las imágenes de las bandas una a una para explorar las posibles causas de valores anormales en los histogramas:
@@ -266,7 +265,7 @@ hist(b5,main = "Banda 5",breaks=200,xlab = "Valor del pixel")
 hist(b6,main = "Banda 6",breaks=200,xlab = "Valor del pixel")
 hist(b7,main = "Banda 7",breaks=200,xlab = "Valor del pixel")
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c60.png)
+![image](https://user-images.githubusercontent.com/100314590/158028562-9ec6159e-6606-4d57-9700-3569106ef9a6.png)
 
 
 
@@ -295,14 +294,14 @@ plotRGB(Color_real,scale=1)
 ```plotRGB(Color_real,scale=1,stretch='lin')```
 
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c61.png)
+![image](https://user-images.githubusercontent.com/100314590/158028567-d0eac289-a69c-4691-a0fa-c8dcc87af46d.png)
 
 
 ##### También podemos realizar una ecualización, mediante la cual el estiramiento asigna más valores a las partes más frecuentes del histograma:
 
 ```plotRGB(Color_real,scale=1,stretch='hist')```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c63.png)
+![image](https://user-images.githubusercontent.com/100314590/158028574-5dbb3b18-5165-4477-a648-dce317651385.png)
 
 
 ##### **2.1.2. Falso color**:
@@ -319,13 +318,13 @@ plotRGB(Falso_color,scale=1)
 
 ```plotRGB(Falso_color,scale=1,stretch='lin')```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c65.png)
+![image](https://user-images.githubusercontent.com/100314590/158028582-f1d751af-7c11-4fde-a6d8-caf6562313f0.png)
 
 
 ##### Falso color con ajuste del histograma siguiendo una ecualización:
 ```plotRGB(Falso_color,scale=1,stretch='hist')```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c66.png)
+![image](https://user-images.githubusercontent.com/100314590/158028590-27492d48-0011-49ca-86a7-e1813a2ba160.png)
 
 
 
@@ -348,8 +347,7 @@ names(img_preincendio)
 #Visualización de la imagen con la combinación de bandas 6-5-3:
 plotRGB(img_preincendio, r=6,g=5,b=3,scale=1,stretch='lin')
 ~~~
-
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c69.png)
+![image](https://user-images.githubusercontent.com/100314590/158028595-8e0345f3-208a-447b-a5c9-9c3c053b7ef5.png)
 
 ##### Podríamos visualizar la imagen con la combinación de bandas 6-5-3 con zoom: 
 ~~~
@@ -392,7 +390,7 @@ plot(sr[,c(1,2)], main = "Relaciones entre bandas")
 mtext("Azul vs Verde", side = 3, line = 0.5)
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c6d.png)
+![image](https://user-images.githubusercontent.com/100314590/158028606-c84d0ac2-9741-4dc5-89a5-d3a89391ade1.png)
 
 
 ##### Consultamos el coeficiente de correlación de Pearson entre las bandas verde y azul:
@@ -409,7 +407,7 @@ plot(sr[,c(4,3)], main = "Relaciones entre bandas")
 mtext("NIR vs Rojo", side = 3, line = 0.5)
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c6e.png)
+![image](https://user-images.githubusercontent.com/100314590/158028610-ca7ca874-2008-42ae-abe8-d8c73aa157e6.png)
 
 
 ##### De nuevo, consultamos el coeficiente de correlación de Pearson:
@@ -431,13 +429,13 @@ mtext("NIR vs Rojo", side = 3, line = 0.5)
 ##### Obtenemos el histograma de valores de la imagen del Índice NDVI,
 ```hist(NDVI_pre)```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c6f.png)
+![image](https://user-images.githubusercontent.com/100314590/158028616-2e7ed689-447a-4cdf-a910-1d460b2cc535.png)
 
 ##### Como se puede observar, hereda casi todas las características de las bandas de origen, pero los valores máximos y mínimos pueden variar en una franja entre -1 y 1. Aunque generalmente los valores del NDVI se situarán en un área pequeña de su rango potencial entre -1 y 1, en nuestro caso sí hay valores -1 y 1 (en posteriores entradas exploraremos el por qué de este resultado):
 
 ```plot(NDVI_pre)```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c70.png)
+![image](https://user-images.githubusercontent.com/100314590/158028627-f9f60685-120f-4e81-90ee-71a500e8fdd1.png)
 
 ##### Normalmente, los píxeles en zonas con vegetación sana o densa reflejan más luz Infrarroja, lo que da como resultado valores altos de NDVI. Los píxeles en zonas con vegetación enferma o donde no hay vegetación absorben más luz Infrarroja, lo que da como resultado valores NDVI bajos o negativos. Según su valor NDVI, se puede identificar la vegetación en una región como vegetación densa, vegetación moderada, vegetación escasa o sin vegetación. El rango de valores NDVI que se suele emplear para cada tipo de situación:
 
@@ -459,7 +457,7 @@ plot(tipos.veg,col = rev(terrain.colors(4)),
      main = 'NDVI umbralizado')
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c72.png)
+![image](https://user-images.githubusercontent.com/100314590/158028634-65865054-1792-4a77-ac99-b6b486029e1d.png)
 
 
 ##### Podemos obtener también un gráfico de distribución de tipos de vegetación:
@@ -473,7 +471,7 @@ barplot(tipos.veg,
                       "Vegetación densa o sana"))
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c73.png)
+![image](https://user-images.githubusercontent.com/100314590/158028641-7dc653d0-080f-4b0f-9964-6de5693c1283.png)
 
 ##### **2.1.5. Construcción del Índice NBR**
 
@@ -500,7 +498,7 @@ plot(NBR_pre,
      main = "NBR Pre-Incendio",
      axes = FALSE, box = FALSE)
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c7c.png)
+![image](https://user-images.githubusercontent.com/100314590/158028651-6a1fa6d3-1c59-4ac2-bd0f-fb1d56eeaa59.png)
 
 
 ##### Por último, guardamos los índices generados
@@ -587,7 +585,7 @@ hist(b5,main = "Banda 5",breaks=200,xlab = "Valor del pixel")
 hist(b6,main = "Banda 6",breaks=200,xlab = "Valor del pixel")
 hist(b7,main = "Banda 7",breaks=200,xlab = "Valor del pixel")
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c7e.png)
+![image](https://user-images.githubusercontent.com/100314590/158028661-d32b6623-3d07-495a-a63a-cab5abc97469.png)
 
 
 ~~~
@@ -601,7 +599,7 @@ plot(b6, main = "SWIR 1", col = grey.colors(255, start=0, end=1))
 plot(b7, main = "SWIR 2",col = grey.colors(255, start=0, end=1))
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c7f.png)
+![image](https://user-images.githubusercontent.com/100314590/158028665-2f6aefe5-4e9e-40c8-95fc-c57b71276aee.png)
 
 ~~~
 # Limitamos los valores digitales minimos de los pixeles de la imagen a 0
@@ -621,7 +619,7 @@ hist(b5,main = "Banda 5",breaks=200,xlab = "Valor del pixel")
 hist(b6,main = "Banda 6",breaks=200,xlab = "Valor del pixel")
 hist(b7,main = "Banda 7",breaks=200,xlab = "Valor del pixel")
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c80.png)
+![image](https://user-images.githubusercontent.com/100314590/158028670-5bc27dd5-76e3-4ac6-8cf7-858caf59f08c.png)
 
 
 ##### Como hicimos para la situación preincendio, unimos las bandas mediante un stack para visualizar: 
@@ -646,7 +644,7 @@ plotRGB(Color_real,scale=1)
 # Visualizacion con ajuste del histograma lineal para mejorar la imagen, 
 plotRGB(Color_real,scale=1,stretch='lin')
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c82.png)
+![image](https://user-images.githubusercontent.com/100314590/158028675-32383580-a3c9-42f6-93ad-fb056d20cf66.png)
 
 
 
@@ -655,7 +653,7 @@ plotRGB(Color_real,scale=1,stretch='lin')
 
 ```plotRGB(Color_real,scale=1,stretch='hist')```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c83.png)
+![image](https://user-images.githubusercontent.com/100314590/158028682-c2215f49-0b32-4190-99f6-6b4cb5461665.png)
 
 
 ##### **2.2.2. Falso color**
@@ -669,12 +667,12 @@ plotRGB(Falso_color,scale=1)
 #Visualización de la imagen en falso color con ajuste del histograma lineal
 plotRGB(Falso_color,scale=1,stretch='lin')
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c84.png)
+![image](https://user-images.githubusercontent.com/100314590/158028688-91634717-24a5-4e37-9689-e8783c60287f.png)
 
 ##### Visualización siguiendo una ecualizacion:
 ```plotRGB(Falso_color,scale=1,stretch='hist')```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c86.png)
+![image](https://user-images.githubusercontent.com/100314590/158028693-66295d2d-840f-4367-8853-8e0c97d892cb.png)
 
 
 ##### **2.2.3. Unión de bandas** 
@@ -698,7 +696,7 @@ plotRGB(img_postincendio, r=6,g=5,b=3,scale=1,stretch='lin')
 plotRGB(img_postincendio, r=6,g=5,b=3,scale=1,stretch='lin',
        ext=extent(c(483500,490000,4125000,4130000)))
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c87.png)
+![image](https://user-images.githubusercontent.com/100314590/158028705-57030be5-8c57-496b-b267-1d2a890748f2.png)
 
 
 ##### Procedemos a guardar las imagenes ráster:
@@ -726,13 +724,13 @@ NDVI_post
 hist(NDVI_post)
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c88.png)
+![image](https://user-images.githubusercontent.com/100314590/158028711-48538e20-ebeb-4eb4-a1c8-0846ffd1fb43.png)
 
 
 ##### Visualizamos nuestro Índice NDVI:
 ```plot(NDVI_post)```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c89.png)
+![image](https://user-images.githubusercontent.com/100314590/158028717-fe814bff-21bf-4a16-a490-ac4779e94e60.png)
 
 
 ##### Umbralizamos:
@@ -746,7 +744,7 @@ tipos.veg <- reclassify(NDVI_post,
 plot(tipos.veg,col = rev(terrain.colors(4)),
      main = 'NDVI umbralizado')
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c8a.png)
+![image](https://user-images.githubusercontent.com/100314590/158028720-00997cef-8dfe-4ba4-874e-3efc246b69d7.png)
 
 ##### Y su gráfico de distribución de tipos de vegetación:
 ~~~
@@ -758,7 +756,7 @@ barplot(tipos.veg,
                       "Vegetación moderada", 
                       "Vegetación densa o sana"))
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c8b.png)
+![image](https://user-images.githubusercontent.com/100314590/158028728-8803e566-019c-485a-b948-6dc4acbf17e8.png)
 
 
 ##### **2.2.5. Índice NBR**
@@ -781,7 +779,7 @@ plot(NBR_post,
      axes = FALSE, box = FALSE)
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c8d.png)
+![image](https://user-images.githubusercontent.com/100314590/158028736-85bfb61b-caa9-418a-99fe-707872491123.png)
 
 
 ##### Finalmente, guardamos los Índices generados:
@@ -821,7 +819,7 @@ NBR_post<-raster('./Landsat/Indices/NBR_post.tif')
 ##### Visualizamos el resultado:
 ```plot(dNBR, main="dNBR")```
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c91.png)
+![image](https://user-images.githubusercontent.com/100314590/158028742-1c959846-5c94-4fdc-99be-c3a997261e1c.png)
 
 
 ##### A continuacion, vamos a clasificar el mapa en niveles se severidad siguendo los umbrales del proyecto FIREMON (Lutes *et al.*, 2006)
@@ -869,7 +867,7 @@ mis_colores=c("purple",        #Severidad alta
 plot(dNBR_umb, col = mis_colores,
      main = 'dNBR umbralizado')
 ~~~
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c93.jpeg)
+![image](https://user-images.githubusercontent.com/100314590/158028748-e860edaf-d818-4b3b-b3d2-c397d90ed142.png)
 
 
 ##### O sin ejes y con la leyenda creada:
@@ -879,7 +877,7 @@ plot(dNBR_umb, col = mis_colores,legend=FALSE,box=FALSE,axes=FALSE,
 legend("topright", inset=0.05, legend =rev(leyenda), fill = rev(mis_colores), cex=0.5) 
 ~~~
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c92.png)
+![image](https://user-images.githubusercontent.com/100314590/158028757-52a43b03-3069-4688-88b4-5bac3780e673.png)
 
 
 ##### Guardamos los Rasterlayers dNBR generados:
@@ -902,6 +900,6 @@ writeRaster(dNBR_umb,
 (https://code.earthengine.google.com/731befd948a1743943baaf352242c0d6)
 
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/60ef7cbdee8520724c6968c96.png)
+![image](https://user-images.githubusercontent.com/100314590/158028766-152675a2-bf24-479f-bac4-6bb5c9d4f4d2.png)
 
 
