@@ -4,7 +4,7 @@ Este repositorio proporciona un script que utiliza R para descargar, procesar y 
 
 Este script proporciona una forma de identificar y caracterizar las áreas quemadas en la Sierra Bermeja a través del uso de ortofotos generadas con imágenes de teledetección antes y después del incendio, así como la aplicación del índice de vegetación de diferencia normalizada (NDVI) y el índice normalizado de área quemada (NBR). El objetivo final es obtener la severidad del incendio a través del delta del índice NBR (dNBR).
 
-## Prerrequisitos
+## Requisitos
 - R y RStudio instalados
 - Paquetes de R necesarios:
     - `sf`
@@ -12,7 +12,7 @@ Este script proporciona una forma de identificar y caracterizar las áreas quema
     - `getSpatialData`
     - `raster`
 
-## Guía de uso
+## Uso
 ### Paso 1: Obtención de imágenes Landsat 8
 Las imágenes Landsat se pueden obtener utilizando las funciones de descarga disponibles en el script. Se proporcionan ejemplos para la obtención de imágenes antes y después del incendio.
 
