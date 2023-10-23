@@ -25,7 +25,7 @@ Finalmente, el script proporciona funciones para calcular la severidad del incen
 Para utilizar estos ejercicios, puedes clonar este repositorio y abrir los archivos en tu entorno R preferido. No he actualizado estos ejercicios desde que los creé, así que considera esto como un archivo de mi viaje de aprendizaje más que como un recurso de aprendizaje actualizado.
 
 ## Contribución
-Dado que este repositorio está destinado a ser un archivo personal (registro de las actividades realizas en el marco del Máster Oficial [Geoforest](https://mastergeoforest.es/) ), no estoy buscando contribuciones activamente. Sin embargo, si encuentras algún error o tienes alguna sugerencia de mejora, no dudes en abrir un issue.
+Dado que este repositorio está destinado a ser un archivo personal (registro de las actividades realizadas en el marco del Máster Oficial [Geoforest](https://mastergeoforest.es/) ), no estoy buscando contribuciones activamente. Sin embargo, si encuentras algún error o tienes alguna sugerencia de mejora, no dudes en abrir un issue.
 
 ## Referencias
 [Landsat Program]: https://www.usgs.gov/land-resources/nli/landsat](https://landsat.gsfc.nasa.gov/
